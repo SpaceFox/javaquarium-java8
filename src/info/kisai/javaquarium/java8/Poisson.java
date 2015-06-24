@@ -3,7 +3,7 @@ package info.kisai.javaquarium.java8;
 /**
  * Created by spacefox on 24/06/15.
  */
-public class Poisson {
+public abstract class Poisson {
 
     public enum Sexe {
         MALE,
@@ -18,11 +18,8 @@ public class Poisson {
         this.sexe = sexe;
     }
 
-    public String getNom() {
-        return nom;
-    }
-
-    public Sexe getSexe() {
-        return sexe;
+    @Override
+    public String toString() {
+        return nom + " (" + getClass().getSimpleName() + ", " + sexe + ")";
     }
 }

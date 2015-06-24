@@ -13,8 +13,8 @@ public class Aquarium {
 
     private int tour = 1;
 
-    public void addPoisson(String nom, Poisson.Sexe sexe) {
-        poissons.add(new Poisson(nom, sexe));
+    public void addPoisson(Poisson poisson) {
+        poissons.add(poisson);
     }
 
     public void addAlgue() {
@@ -26,7 +26,7 @@ public class Aquarium {
         System.out.println(algues.size() + " algues");
         System.out.println(poissons.size() + " poissons :");
         for (Poisson poisson : poissons) {
-            System.out.println("\t" + poisson.getNom() + " (" + poisson.getSexe() + ")");
+            System.out.println("\t" + poisson);
         }
 
         tour++;
